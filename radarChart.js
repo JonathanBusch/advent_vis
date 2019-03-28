@@ -138,12 +138,12 @@ function RadarChart(id, data, options) {
 	
 	//The radial line function
 	var radarLine = d3.radialLine()
-		.interpolate("linear-closed")
+		.curve(d3.curveBasis)
 		.radius(function(d) { return rScale(d.value); })
 		.angle(function(d,i) {	return i*angleSlice; });
 		
 	if(cfg.roundStrokes) {
-		radarLine.interpolate("cardinal-closed");
+		radarLine.curve(d3.curveBasis);
 	}
 				
 	//Create a wrapper for the blobs	
