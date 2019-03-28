@@ -138,7 +138,7 @@ function RadarChart(id, data, options) {
 	
 	//The radial line function
 	var radarLine = d3.radialLine()
-		.curve(d3.curveBasis)
+		.curve(d3.curveLinear)
 		.radius(function(d) { return rScale(d.value); })
 		.angle(function(d,i) {	return i*angleSlice; });
 		
