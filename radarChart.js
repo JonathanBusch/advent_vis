@@ -250,7 +250,7 @@ function RadarChart(id, data, options) {
 
 	svg.append("g")
   		.attr("class", "legendOrdinal")
-  		.attr("transform", "translate(20,20)");
+  		.attr("transform", "translate(0,0)");
 
 	var legendOrdinal = d3.legendColor()
   		//d3 symbol creates a path-string, for example
