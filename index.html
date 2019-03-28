@@ -37,7 +37,7 @@
 	</head>
 	<body>
 
-		<div class="radarChart"></div>
+		<div class="radarChart1"></div>
 
 		<script src="radarChart.js"></script>	
 		<script>
@@ -56,7 +56,7 @@
 			////////////////////////// Data ////////////////////////////// 
 			////////////////////////////////////////////////////////////// 
 
-			var data = [
+			var data1 = [
 					  [//Affordable
 						{axis:"Rest of Europe",value:455},
 						{axis:"North America",value:127},
@@ -118,7 +118,57 @@
 			  color: color
 			};
 			//Call function to draw the Radar chart
-			RadarChart(".radarChart", data, radarChartOptions);
+			RadarChart(".radarChart1", data1, radarChartOptions);
 		</script>
+		
+		<div class="radarChart2"></div>
+		<script>
+			var data2 = [
+					  [//Affordable
+						{axis:"Rest of Europe",value:455},
+						{axis:"North America",value:127},
+						{axis:"South America",value:111},
+						{axis:"Asia",value:318},
+						{axis:"Australia",value:175},
+						{axis:"Africa",value:581}
+					  ],[//BECCS
+						{axis:"Rest of Europe",value:771},
+						{axis:"North America",value:223},
+						{axis:"South America",value:197},
+						{axis:"Asia",value:559},
+						{axis:"Australia",value:310},
+						{axis:"Africa",value:1056}
+					  ],[//Insular
+						{axis:"Rest of Europe",value:288},
+						{axis:"North America",value:76},
+						{axis:"South America",value:62},
+						{axis:"Asia",value:241},
+						{axis:"Australia",value:91},
+						{axis:"Africa",value:325}
+					  ],[//TechFail
+						{axis:"Rest of Europe",value:689},
+						{axis:"North America",value:178},
+						{axis:"South America",value:177},
+						{axis:"Asia",value:445},
+						{axis:"Australia",value:231},
+						{axis:"Africa",value:455}
+					  ],[//TechOptimism
+						{axis:"Rest of Europe",value:385},
+						{axis:"North America",value:123},
+						{axis:"South America",value:138},
+						{axis:"Asia",value:259},
+						{axis:"Australia",value:196},
+						{axis:"Africa",value:729}
+					  ],[//UK
+						{axis:"Rest of Europe",value:680},
+						{axis:"North America",value:194},
+						{axis:"South America",value:221},
+						{axis:"Asia",value:395},
+						{axis:"Australia",value:301},
+						{axis:"Africa",value:1548}
+					  ]
+					];
+			//Call function to draw the Radar chart
+			RadarChart(".radarChart2", data2, radarChartOptions);
 	</body>
 </html>
