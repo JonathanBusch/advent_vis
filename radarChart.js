@@ -256,7 +256,8 @@ function RadarChart(id, data, options) {
   		//d3 symbol creates a path-string, for example
   		//"M0,-8.059274488676564L9.306048591020996,
   		//8.059274488676564 -9.306048591020996,8.059274488676564Z"
-  		.shape("path", d3.symbol().type(d3.symbolTriangle).size(150)())
+		.title("Scenario:")
+  		.shape("path", d3.symbol().type(d3.symbolCircle).size(150)())
   		.shapePadding(10)
   		//use cellFilter to hide the "e" cell
   		.cellFilter(function(d){ return d.label !== "e" })
