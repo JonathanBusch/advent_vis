@@ -143,7 +143,7 @@ function RadarChart(id, data, options) {
 		.angle(function(d,i) {	return i*angleSlice; });
 		
 	if(cfg.roundStrokes) {
-		radarLine.curve(d3.curveBasis);
+		radarLine.curve(d3.curveCardinalClosed);
 	}
 				
 	//Create a wrapper for the blobs	
@@ -242,7 +242,7 @@ function RadarChart(id, data, options) {
 	/////////////////////////////////////////////////////////
 
 	
-	var ordinal = d3.scale.ordinal()
+	var ordinal = d3.scaleOrdinal()
   		.domain(["Affordable", "BECCS", "Insular", "Tech-Fail", "Tech-Optimism", "UK"])
   		.range(["#B96167","#9C759D","#5090AA","#3B9F81","#859F4B","#CD8F47"]);
 
