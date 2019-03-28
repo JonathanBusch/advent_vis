@@ -137,7 +137,7 @@ function RadarChart(id, data, options) {
 	/////////////////////////////////////////////////////////
 	
 	//The radial line function
-	var radarLine = d3.svg.line.radial()
+	var radarLine = d3.radialLine()
 		.interpolate("linear-closed")
 		.radius(function(d) { return rScale(d.value); })
 		.angle(function(d,i) {	return i*angleSlice; });
