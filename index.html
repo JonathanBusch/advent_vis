@@ -55,9 +55,9 @@
 			////////////////////////////////////////////////////////////// 
 			////////////////////////// Data ////////////////////////////// 
 			////////////////////////////////////////////////////////////// 
-			const data = await d3.csv("json/CO2Affordable.json");
-			console.log(data);
-			
+			d3.csv("json/CO2Affordable.json").then(function(data) {
+  				console.log(data);
+
 			var data1 = [
 					  [//Affordable
 						{axis:"Rest of Europe",value:4107},
@@ -120,7 +120,8 @@
 			  color: color
 			};
 			//Call function to draw the Radar chart
-			RadarChart(".radarChart1", data, radarChartOptions);
+			RadarChart(".radarChart1", data1, radarChartOptions);
+			});
 			
 		</script>
 		
