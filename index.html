@@ -57,54 +57,9 @@
 			////////////////////////////////////////////////////////////// 
 			d3.csv("json/CO22030.json").then(function(data) {
   				//console.log(data);
+			//NOT UK
+			var data1 = [[{"axis":"Rest of Europe","value":3922.5209007477},{"axis":"North America","value":1058.1454376923},{"axis":"South America","value":150.3323056069},{"axis":"Asia","value":426.8591827325},{"axis":"Australia","value":3834.7138466117},{"axis":"Africa","value":102.6377320849}],[{"axis":"Rest of Europe","value":4346.3357317868},{"axis":"North America","value":1174.0772287266},{"axis":"South America","value":164.0754665901},{"axis":"Asia","value":470.3548823301},{"axis":"Australia","value":4287.5262115631},{"axis":"Africa","value":117.4954601572}],[{"axis":"Rest of Europe","value":3542.6781185804},{"axis":"North America","value":1122.6564968156},{"axis":"South America","value":174.6017844504},{"axis":"Asia","value":669.2447981786},{"axis":"Australia","value":3112.341656136},{"axis":"Africa","value":118.2818459581}],[{"axis":"Rest of Europe","value":4388.8957429145},{"axis":"North America","value":1203.5625827017},{"axis":"South America","value":178.9066309346},{"axis":"Asia","value":588.9077099513},{"axis":"Australia","value":4240.0106308059},{"axis":"Africa","value":111.0796126135}],[{"axis":"Rest of Europe","value":3527.5875771061},{"axis":"North America","value":940.1222217872},{"axis":"South America","value":132.7155500109},{"axis":"Asia","value":391.9293677767},{"axis":"Australia","value":3548.9274300662},{"axis":"Africa","value":93.8069776149}],[{"axis":"Rest of Europe","value":3623.6020756076},{"axis":"North America","value":1016.4524412624},{"axis":"South America","value":136.9939154283},{"axis":"Asia","value":417.6344348399},{"axis":"Australia","value":3533.8797487552},{"axis":"Africa","value":104.4598969395}]];
 			
-			var data1 = [[{"axis":"UK","value":27804.9131619228},{"axis":"Rest of Europe","value":3922.5209007477},{"axis":"North America","value":1058.1454376923},{"axis":"South America","value":150.3323056069},{"axis":"Asia","value":426.8591827325},{"axis":"Australia","value":3834.7138466117},{"axis":"Africa","value":102.6377320849}],[{"axis":"UK","value":59008.4885619369},{"axis":"Rest of Europe","value":4346.3357317868},{"axis":"North America","value":1174.0772287266},{"axis":"South America","value":164.0754665901},{"axis":"Asia","value":470.3548823301},{"axis":"Australia","value":4287.5262115631},{"axis":"Africa","value":117.4954601572}],[{"axis":"UK","value":46385.6843338537},{"axis":"Rest of Europe","value":3542.6781185804},{"axis":"North America","value":1122.6564968156},{"axis":"South America","value":174.6017844504},{"axis":"Asia","value":669.2447981786},{"axis":"Australia","value":3112.341656136},{"axis":"Africa","value":118.2818459581}],[{"axis":"UK","value":30745.7552220028},{"axis":"Rest of Europe","value":4388.8957429145},{"axis":"North America","value":1203.5625827017},{"axis":"South America","value":178.9066309346},{"axis":"Asia","value":588.9077099513},{"axis":"Australia","value":4240.0106308059},{"axis":"Africa","value":111.0796126135}],[{"axis":"UK","value":65407.2502157099},{"axis":"Rest of Europe","value":3527.5875771061},{"axis":"North America","value":940.1222217872},{"axis":"South America","value":132.7155500109},{"axis":"Asia","value":391.9293677767},{"axis":"Australia","value":3548.9274300662},{"axis":"Africa","value":93.8069776149}],[{"axis":"UK","value":62333.1378889178},{"axis":"Rest of Europe","value":3623.6020756076},{"axis":"North America","value":1016.4524412624},{"axis":"South America","value":136.9939154283},{"axis":"Asia","value":417.6344348399},{"axis":"Australia","value":3533.8797487552},{"axis":"Africa","value":104.4598969395}]];
-			console.log(data1);
-			var datax = [
-					  [//Affordable
-						{axis:"Rest of Europe",value:4107},
-						{axis:"Australia",value:4161},
-						{axis:"North America",value:1080},
-						{axis:"South America",value:150},
-						{axis:"Africa",value:102},
-						{axis:"Asia",value:428}
-					  ],[//BECCS
-						{axis:"Rest of Europe",value:4878},
-						{axis:"Australia",value:5235},
-						{axis:"North America",value:1236},
-						{axis:"South America",value:162},
-						{axis:"Africa",value:117},
-						{axis:"Asia",value:474}
-					  ],[//Insular
-						{axis:"Rest of Europe",value:3677},
-						{axis:"Australia",value:3321},
-						{axis:"North America",value:1135},
-						{axis:"South America",value:169},
-						{axis:"Africa",value:118},
-						{axis:"Asia",value:666}
-					  ],[//TechFail
-						{axis:"Rest of Europe",value:4555},
-						{axis:"Australia",value:4537},
-						{axis:"North America",value:1226},
-						{axis:"South America",value:179},
-						{axis:"Africa",value:110},
-						{axis:"Asia",value:591}
-					  ],[//TechOptimism
-						{axis:"Rest of Europe",value:4173},
-						{axis:"Australia",value:4700},
-						{axis:"North America",value:1016},
-						{axis:"South America",value:131},
-						{axis:"Africa",value:93},
-						{axis:"Asia",value:398}
-					  ],[//UK
-						{axis:"Rest of Europe",value:4216},
-						{axis:"Australia",value:4592},
-						{axis:"North America",value:1086},
-						{axis:"South America",value:136},
-						{axis:"Africa",value:104},
-						{axis:"Asia",value:423}
-					  ]
-					];
 			////////////////////////////////////////////////////////////// 
 			//////////////////// Draw the Chart ////////////////////////// 
 			////////////////////////////////////////////////////////////// 
@@ -116,7 +71,7 @@
 			  w: width,
 			  h: height,
 			  margin: margin,
-			  maxValue: 5500,
+			  maxValue: 4500,
 			  levels: 6,
 			  roundStrokes: true,
 			  color: color
@@ -129,259 +84,159 @@
 		
 		<div class="radarChart2"><h1>Biodiversity - 2030</h1></div>
 		<script>
-			var data2 = [
-					  [//Affordable
-						{axis:"UK",value:222},
-						{axis:"Rest of Europe",value:632},
-						{axis:"Australia",value:6112},
-						{axis:"North America",value:2092},
-						{axis:"South America",value:2279},
-						{axis:"Africa",value:681},
-						{axis:"Asia",value:4033}
-					  ],[//BECCS
-						{axis:"UK",value:416},
-						{axis:"Rest of Europe",value:619},
-						{axis:"Australia",value:5716},
-						{axis:"North America",value:1952},
-						{axis:"South America",value:2170},
-						{axis:"Africa",value:544},
-						{axis:"Asia",value:3751}
-					  ],[//Insular
-						{axis:"Rest of Europe",value:3677},
-						{axis:"Australia",value:3321},
-						{axis:"North America",value:1135},
-						{axis:"South America",value:169},
-						{axis:"Africa",value:118},
-						{axis:"Asia",value:666}
-					  ],[//TechFail
-						{axis:"Rest of Europe",value:4555},
-						{axis:"Australia",value:4537},
-						{axis:"North America",value:1226},
-						{axis:"South America",value:179},
-						{axis:"Africa",value:110},
-						{axis:"Asia",value:591}
-					  ],[//TechOptimism
-						{axis:"Rest of Europe",value:4173},
-						{axis:"Australia",value:4700},
-						{axis:"North America",value:1016},
-						{axis:"South America",value:131},
-						{axis:"Africa",value:93},
-						{axis:"Asia",value:398}
-					  ],[//UK
-						{axis:"Rest of Europe",value:4216},
-						{axis:"Australia",value:4592},
-						{axis:"North America",value:1086},
-						{axis:"South America",value:136},
-						{axis:"Africa",value:104},
-						{axis:"Asia",value:423}
-					  ]
-					];
+			//YES UK
+			var data2 = [[{"axis":"UK","value":221.8983497911},{"axis":"Rest of Europe","value":625.8069189154},{"axis":"North America","value":2090.6278593855},{"axis":"South America","value":2260.9662080231},{"axis":"Asia","value":4033.261262293},{"axis":"Australia","value":6095.6971610195},{"axis":"Africa","value":680.2682565523}],[{"axis":"UK","value":415.893729345},{"axis":"Rest of Europe","value":600.5133080603},{"axis":"North America","value":1947.9112106287},{"axis":"South America","value":2151.5857889127},{"axis":"Asia","value":3749.9504269634},{"axis":"Australia","value":5669.6252031673},{"axis":"Africa","value":643.0682615197}],[{"axis":"UK","value":380.1051385324},{"axis":"Rest of Europe","value":339.2671106577},{"axis":"North America","value":1088.5842245716},{"axis":"South America","value":1358.3785495703},{"axis":"Asia","value":2349.7161759271},{"axis":"Australia","value":2950.2198716101},{"axis":"Africa","value":378.9057847639}],[{"axis":"UK","value":314.7938191887},{"axis":"Rest of Europe","value":673.7744300181},{"axis":"North America","value":2245.4968889039},{"axis":"South America","value":2508.5402211702},{"axis":"Asia","value":4438.5046185262},{"axis":"Australia","value":6473.9150800759},{"axis":"Africa","value":732.5326345547}],[{"axis":"UK","value":440.2874237272},{"axis":"Rest of Europe","value":452.7468381428},{"axis":"North America","value":1439.4504714222},{"axis":"South America","value":1622.8257151809},{"axis":"Asia","value":2782.7217563989},{"axis":"Australia","value":4183.1358523084},{"axis":"Africa","value":479.2595197705}],[{"axis":"UK","value":413.8962638649},{"axis":"Rest of Europe","value":412.0048255782},{"axis":"North America","value":1289.729021651},{"axis":"South America","value":1462.6365159107},{"axis":"Asia","value":2498.560162489},{"axis":"Australia","value":3720.2948454774},{"axis":"Africa","value":434.6303431275}]];
+			
+			var color = d3.scaleOrdinal()
+				.range(["#B96167","#9C759D","#5090AA","#3B9F81","#859F4B","#CD8F47"]);
+				
+			var radarChartOptions = {
+			  w: width,
+			  h: height,
+			  margin: margin,
+			  maxValue: 6500,
+			  levels: 6,
+			  roundStrokes: true,
+			  color: color
+			};
 			//Call function to draw the Radar chart
-			//RadarChart(".radarChart2", data2, radarChartOptions);
+			RadarChart(".radarChart2", data2, radarChartOptions);
 		</script>
 		
-		<div class="radarChart2"><h1>Biodiversity - 2030</h1></div>
+		<div class="radarChart3"><h1>Water - 2030</h1></div>
 		<script>
-			var data2 = [
-					  [//Affordable
-						{axis:"Rest of Europe",value:4107},
-						{axis:"Australia",value:4161},
-						{axis:"North America",value:1080},
-						{axis:"South America",value:150},
-						{axis:"Africa",value:102},
-						{axis:"Asia",value:428}
-					  ],[//BECCS
-						{axis:"Rest of Europe",value:4878},
-						{axis:"Australia",value:5235},
-						{axis:"North America",value:1236},
-						{axis:"South America",value:162},
-						{axis:"Africa",value:117},
-						{axis:"Asia",value:474}
-					  ],[//Insular
-						{axis:"Rest of Europe",value:3677},
-						{axis:"Australia",value:3321},
-						{axis:"North America",value:1135},
-						{axis:"South America",value:169},
-						{axis:"Africa",value:118},
-						{axis:"Asia",value:666}
-					  ],[//TechFail
-						{axis:"Rest of Europe",value:4555},
-						{axis:"Australia",value:4537},
-						{axis:"North America",value:1226},
-						{axis:"South America",value:179},
-						{axis:"Africa",value:110},
-						{axis:"Asia",value:591}
-					  ],[//TechOptimism
-						{axis:"Rest of Europe",value:4173},
-						{axis:"Australia",value:4700},
-						{axis:"North America",value:1016},
-						{axis:"South America",value:131},
-						{axis:"Africa",value:93},
-						{axis:"Asia",value:398}
-					  ],[//UK
-						{axis:"Rest of Europe",value:4216},
-						{axis:"Australia",value:4592},
-						{axis:"North America",value:1086},
-						{axis:"South America",value:136},
-						{axis:"Africa",value:104},
-						{axis:"Asia",value:423}
-					  ]
-					];
+			//NO UK
+			var data3 = [[{"axis":"Rest of Europe","value":567.6305862647},{"axis":"North America","value":214.4642536999},{"axis":"South America","value":21.7373395559},{"axis":"Asia","value":69.5494320705},{"axis":"Australia","value":515.4073492969},{"axis":"Africa","value":6.5491389393}],[{"axis":"Rest of Europe","value":622.7332482717},{"axis":"North America","value":234.7003473721},{"axis":"South America","value":23.4467745025},{"axis":"Asia","value":75.2268013285},{"axis":"Australia","value":549.6485398749},{"axis":"Africa","value":6.9984774575}],[{"axis":"Rest of Europe","value":521.3220311888},{"axis":"North America","value":245.7017725953},{"axis":"South America","value":26.6455902054},{"axis":"Asia","value":106.0402786431},{"axis":"Australia","value":383.3090082715},{"axis":"Africa","value":6.713722049}],[{"axis":"Rest of Europe","value":677.2751055661},{"axis":"North America","value":262.7689772841},{"axis":"South America","value":27.1529875411},{"axis":"Asia","value":99.4508909064},{"axis":"Australia","value":574.9197331148},{"axis":"Africa","value":7.8635442812}],[{"axis":"Rest of Europe","value":516.2584357909},{"axis":"North America","value":192.0519332876},{"axis":"South America","value":19.142651862},{"axis":"Asia","value":63.1245891825},{"axis":"Australia","value":445.5614732641},{"axis":"Africa","value":5.6557783796}],[{"axis":"Rest of Europe","value":498.012080621},{"axis":"North America","value":195.7850677638},{"axis":"South America","value":19.3098323151},{"axis":"Asia","value":64.7209585653},{"axis":"Australia","value":430.0357809743},{"axis":"Africa","value":5.5877010843}]];
+			
+			var color = d3.scaleOrdinal()
+				.range(["#B96167","#9C759D","#5090AA","#3B9F81","#859F4B","#CD8F47"]);
+				
+			var radarChartOptions = {
+			  w: width,
+			  h: height,
+			  margin: margin,
+			  maxValue: 700,
+			  levels: 6,
+			  roundStrokes: true,
+			  color: co
 			//Call function to draw the Radar chart
-			//RadarChart(".radarChart2", data2, radarChartOptions);
+			RadarChart(".radarChart3", data3, radarChartOptions);
 		</script>
 		
-		<div class="radarChart2"><h1>Biodiversity - 2030</h1></div>
+		<div class="radarChart4"><h1>Raw Materials - 2030</h1></div>
 		<script>
-			var data2 = [
-					  [//Affordable
-						{axis:"Rest of Europe",value:4107},
-						{axis:"Australia",value:4161},
-						{axis:"North America",value:1080},
-						{axis:"South America",value:150},
-						{axis:"Africa",value:102},
-						{axis:"Asia",value:428}
-					  ],[//BECCS
-						{axis:"Rest of Europe",value:4878},
-						{axis:"Australia",value:5235},
-						{axis:"North America",value:1236},
-						{axis:"South America",value:162},
-						{axis:"Africa",value:117},
-						{axis:"Asia",value:474}
-					  ],[//Insular
-						{axis:"Rest of Europe",value:3677},
-						{axis:"Australia",value:3321},
-						{axis:"North America",value:1135},
-						{axis:"South America",value:169},
-						{axis:"Africa",value:118},
-						{axis:"Asia",value:666}
-					  ],[//TechFail
-						{axis:"Rest of Europe",value:4555},
-						{axis:"Australia",value:4537},
-						{axis:"North America",value:1226},
-						{axis:"South America",value:179},
-						{axis:"Africa",value:110},
-						{axis:"Asia",value:591}
-					  ],[//TechOptimism
-						{axis:"Rest of Europe",value:4173},
-						{axis:"Australia",value:4700},
-						{axis:"North America",value:1016},
-						{axis:"South America",value:131},
-						{axis:"Africa",value:93},
-						{axis:"Asia",value:398}
-					  ],[//UK
-						{axis:"Rest of Europe",value:4216},
-						{axis:"Australia",value:4592},
-						{axis:"North America",value:1086},
-						{axis:"South America",value:136},
-						{axis:"Africa",value:104},
-						{axis:"Asia",value:423}
-					  ]
-					];
+			//NO UK
+			var data4 = [[{"axis":"Rest of Europe","value":16179245.9000212569},{"axis":"North America","value":6545001.1155712511},{"axis":"South America","value":2842363.2081922968},{"axis":"Asia","value":9453526.9607181437},{"axis":"Australia","value":18280148.6452503279},{"axis":"Africa","value":835022.7137268983}],[{"axis":"Rest of Europe","value":17237394.8888710998},{"axis":"North America","value":6962377.6004702924},{"axis":"South America","value":3127530.5650009955},{"axis":"Asia","value":9698381.5064918194},{"axis":"Australia","value":20672896.5238074958},{"axis":"Africa","value":957280.2041681833}],[{"axis":"Rest of Europe","value":14498960.0020621158},{"axis":"North America","value":9920527.2259305604},{"axis":"South America","value":4004053.8419205039},{"axis":"Asia","value":15466257.7948463075},{"axis":"Australia","value":15326495.1465344671},{"axis":"Africa","value":1038091.9680402402}],[{"axis":"Rest of Europe","value":18941293.0371973217},{"axis":"North America","value":8975745.5014422238},{"axis":"South America","value":3891461.9359704321},{"axis":"Asia","value":13753078.1937015206},{"axis":"Australia","value":19981978.6214203015},{"axis":"Africa","value":1067348.4998428733}],[{"axis":"Rest of Europe","value":13885290.3967498634},{"axis":"North America","value":5768463.5885590818},{"axis":"South America","value":2650161.7109735496},{"axis":"Asia","value":8027451.255845096},{"axis":"Australia","value":17237383.1193691492},{"axis":"Africa","value":818749.6989022831}],[{"axis":"Rest of Europe","value":13790299.985231271},{"axis":"North America","value":5987044.6945466064},{"axis":"South America","value":2648781.5657710806},{"axis":"Asia","value":8199464.2919676248},{"axis":"Australia","value":17399091.7679684088},{"axis":"Africa","value":807355.983591642}]];
+			
+			var color = d3.scaleOrdinal()
+				.range(["#B96167","#9C759D","#5090AA","#3B9F81","#859F4B","#CD8F47"]);
+				
+			var radarChartOptions = {
+			  w: width,
+			  h: height,
+			  margin: margin,
+			  maxValue: 22000000,
+			  levels: 6,
+			  roundStrokes: true,
+			  color: co
 			//Call function to draw the Radar chart
-			//RadarChart(".radarChart2", data2, radarChartOptions);
+			RadarChart(".radarChart4", data4, radarChartOptions);
 		</script>
 		
-		<div class="radarChart2"><h1>Biodiversity - 2030</h1></div>
+		<div class="radarChart5"><h1>Food - 2030</h1></div>
 		<script>
-			var data2 = [
-					  [//Affordable
-						{axis:"Rest of Europe",value:4107},
-						{axis:"Australia",value:4161},
-						{axis:"North America",value:1080},
-						{axis:"South America",value:150},
-						{axis:"Africa",value:102},
-						{axis:"Asia",value:428}
-					  ],[//BECCS
-						{axis:"Rest of Europe",value:4878},
-						{axis:"Australia",value:5235},
-						{axis:"North America",value:1236},
-						{axis:"South America",value:162},
-						{axis:"Africa",value:117},
-						{axis:"Asia",value:474}
-					  ],[//Insular
-						{axis:"Rest of Europe",value:3677},
-						{axis:"Australia",value:3321},
-						{axis:"North America",value:1135},
-						{axis:"South America",value:169},
-						{axis:"Africa",value:118},
-						{axis:"Asia",value:666}
-					  ],[//TechFail
-						{axis:"Rest of Europe",value:4555},
-						{axis:"Australia",value:4537},
-						{axis:"North America",value:1226},
-						{axis:"South America",value:179},
-						{axis:"Africa",value:110},
-						{axis:"Asia",value:591}
-					  ],[//TechOptimism
-						{axis:"Rest of Europe",value:4173},
-						{axis:"Australia",value:4700},
-						{axis:"North America",value:1016},
-						{axis:"South America",value:131},
-						{axis:"Africa",value:93},
-						{axis:"Asia",value:398}
-					  ],[//UK
-						{axis:"Rest of Europe",value:4216},
-						{axis:"Australia",value:4592},
-						{axis:"North America",value:1086},
-						{axis:"South America",value:136},
-						{axis:"Africa",value:104},
-						{axis:"Asia",value:423}
-					  ]
-					];
+			//YES UK
+			var data5 = [[{"axis":"UK","value":78547.2975543186},{"axis":"Rest of Europe","value":169020.3251195344},{"axis":"North America","value":52636.3024335356},{"axis":"South America","value":97921.6658633069},{"axis":"Asia","value":68321.2348241788},{"axis":"Australia","value":377857.7265149348},{"axis":"Africa","value":8976.5681951935}],[{"axis":"UK","value":87047.6492611728},{"axis":"Rest of Europe","value":195439.6286155674},{"axis":"North America","value":59467.2672303562},{"axis":"South America","value":106427.0467699587},{"axis":"Asia","value":73654.8332735221},{"axis":"Australia","value":387605.7809701681},{"axis":"Africa","value":9899.4760845692}],[{"axis":"UK","value":90995.8333923102},{"axis":"Rest of Europe","value":142810.2385329971},{"axis":"North America","value":42362.6628438606},{"axis":"South America","value":88285.078945852},{"axis":"Asia","value":66112.9942902641},{"axis":"Australia","value":255032.5971999553},{"axis":"Africa","value":7885.9479985436}],[{"axis":"UK","value":100775.1157956158},{"axis":"Rest of Europe","value":193841.2833142312},{"axis":"North America","value":59014.0866513395},{"axis":"South America","value":112672.8885838081},{"axis":"Asia","value":86361.9324435095},{"axis":"Australia","value":416347.5932305344},{"axis":"Africa","value":10065.8213616241}],[{"axis":"UK","value":70009.794979556},{"axis":"Rest of Europe","value":166624.4814583271},{"axis":"North America","value":49905.2132325661},{"axis":"South America","value":86761.8236302722},{"axis":"Asia","value":60254.824942888},{"axis":"Australia","value":306225.0401269849},{"axis":"Africa","value":8093.1216999457}],[{"axis":"UK","value":77634.8525062602},{"axis":"Rest of Europe","value":164931.5160015653},{"axis":"North America","value":49291.9981767708},{"axis":"South America","value":86642.8174033256},{"axis":"Asia","value":60472.485610414},{"axis":"Australia","value":291523.0527865113},{"axis":"Africa","value":8164.2315661085}]];
+			
+			var color = d3.scaleOrdinal()
+				.range(["#B96167","#9C759D","#5090AA","#3B9F81","#859F4B","#CD8F47"]);
+				
+			var radarChartOptions = {
+			  w: width,
+			  h: height,
+			  margin: margin,
+			  maxValue: 420000,
+			  levels: 6,
+			  roundStrokes: true,
+			  color: co
 			//Call function to draw the Radar chart
-			//RadarChart(".radarChart2", data2, radarChartOptions);
+			RadarChart(".radarChart5", data5, radarChartOptions);
 		</script>
 		
-		<div class="radarChart2"><h1>Biodiversity - 2030</h1></div>
+		<div class="radarChart6"><h1>Fuel - 2030</h1></div>
 		<script>
-			var data2 = [
-					  [//Affordable
-						{axis:"Rest of Europe",value:4107},
-						{axis:"Australia",value:4161},
-						{axis:"North America",value:1080},
-						{axis:"South America",value:150},
-						{axis:"Africa",value:102},
-						{axis:"Asia",value:428}
-					  ],[//BECCS
-						{axis:"Rest of Europe",value:4878},
-						{axis:"Australia",value:5235},
-						{axis:"North America",value:1236},
-						{axis:"South America",value:162},
-						{axis:"Africa",value:117},
-						{axis:"Asia",value:474}
-					  ],[//Insular
-						{axis:"Rest of Europe",value:3677},
-						{axis:"Australia",value:3321},
-						{axis:"North America",value:1135},
-						{axis:"South America",value:169},
-						{axis:"Africa",value:118},
-						{axis:"Asia",value:666}
-					  ],[//TechFail
-						{axis:"Rest of Europe",value:4555},
-						{axis:"Australia",value:4537},
-						{axis:"North America",value:1226},
-						{axis:"South America",value:179},
-						{axis:"Africa",value:110},
-						{axis:"Asia",value:591}
-					  ],[//TechOptimism
-						{axis:"Rest of Europe",value:4173},
-						{axis:"Australia",value:4700},
-						{axis:"North America",value:1016},
-						{axis:"South America",value:131},
-						{axis:"Africa",value:93},
-						{axis:"Asia",value:398}
-					  ],[//UK
-						{axis:"Rest of Europe",value:4216},
-						{axis:"Australia",value:4592},
-						{axis:"North America",value:1086},
-						{axis:"South America",value:136},
-						{axis:"Africa",value:104},
-						{axis:"Asia",value:423}
-					  ]
-					];
+			var data6 = [[{"axis":"Rest of Europe","value":4867215.8379578851},{"axis":"North America","value":899170.5459668387},{"axis":"South America","value":497572.670048919},{"axis":"Asia","value":559589.7077442741},{"axis":"Australia","value":4401446.4973549219},{"axis":"Africa","value":259673.9819894443}],[{"axis":"Rest of Europe","value":6130341.8885704065},{"axis":"North America","value":1066460.1427590924},{"axis":"South America","value":672866.5517021294},{"axis":"Asia","value":700098.5208148919},{"axis":"Australia","value":5103996.9067582972},{"axis":"Africa","value":332666.9728680411}],[{"axis":"Rest of Europe","value":6093687.6364044901},{"axis":"North America","value":1196881.727914654},{"axis":"South America","value":1005995.7946336968},{"axis":"Asia","value":668550.5639972521},{"axis":"Australia","value":4524145.6887233406},{"axis":"Africa","value":430105.1537877547}],[{"axis":"Rest of Europe","value":6199863.640502153},{"axis":"North America","value":1182445.8302974016},{"axis":"South America","value":881693.7072275602},{"axis":"Asia","value":729060.8822754357},{"axis":"Australia","value":4873940.5073570553},{"axis":"Africa","value":408643.5614453843}],[{"axis":"Rest of Europe","value":5316071.211600692},{"axis":"North America","value":904717.8637407136},{"axis":"South America","value":643575.180940189},{"axis":"Asia","value":618689.1415823753},{"axis":"Australia","value":4148185.3271951573},{"axis":"Africa","value":307266.0272283265}],[{"axis":"Rest of Europe","value":5703267.3093544943},{"axis":"North America","value":958308.2298826627},{"axis":"South America","value":622096.7380215167},{"axis":"Asia","value":627492.1800270649},{"axis":"Australia","value":4639943.6615471616},{"axis":"Africa","value":298485.9299889669}]];
+			
+			var color = d3.scaleOrdinal()
+				.range(["#B96167","#9C759D","#5090AA","#3B9F81","#859F4B","#CD8F47"]);
+				
+			var radarChartOptions = {
+			  w: width,
+			  h: height,
+			  margin: margin,
+			  maxValue: 7000000,
+			  levels: 6,
+			  roundStrokes: true,
+			  color: co
 			//Call function to draw the Radar chart
-			//RadarChart(".radarChart2", data2, radarChartOptions);
+			RadarChart(".radarChart6", data6, radarChartOptions);
+		</script>
+		
+		<div class="radarChart7"><h1>Forestry - 2030</h1></div>
+		<script>
+			var data7 = [[{"axis":"UK","value":8557365.3443428781},{"axis":"Rest of Europe","value":7398718.5101735527},{"axis":"North America","value":1312320.1033232601},{"axis":"South America","value":686140.5467788993},{"axis":"Asia","value":3430040.7791377483},{"axis":"Australia","value":4439182.0329068471},{"axis":"Africa","value":160632.5996292368}],[{"axis":"UK","value":7828487.7348996811},{"axis":"Rest of Europe","value":6800506.5723962197},{"axis":"North America","value":1204728.3188851331},{"axis":"South America","value":630764.0261871475},{"axis":"Asia","value":3145360.9910296826},{"axis":"Australia","value":4085680.2558508003},{"axis":"Africa","value":148129.0435779176}],[{"axis":"UK","value":3879785.8744246271},{"axis":"Rest of Europe","value":3431315.9195125457},{"axis":"North America","value":606700.5708780525},{"axis":"South America","value":322741.2807111525},{"axis":"Asia","value":1596477.4797546577},{"axis":"Australia","value":2064300.9809738884},{"axis":"Africa","value":76360.3149438226}],[{"axis":"UK","value":9050373.1417259686},{"axis":"Rest of Europe","value":7835408.0229481785},{"axis":"North America","value":1389643.8197447509},{"axis":"South America","value":727891.8655387617},{"axis":"Asia","value":3641660.8525926848},{"axis":"Australia","value":4699860.4503465276},{"axis":"Africa","value":170316.2943308596}],[{"axis":"UK","value":5707700.0207242519},{"axis":"Rest of Europe","value":4973541.2506364696},{"axis":"North America","value":880155.6220530828},{"axis":"South America","value":461299.2737513189},{"axis":"Asia","value":2298315.5572108836},{"axis":"Australia","value":2990471.1031485028},{"axis":"Africa","value":108549.3502669157}],[{"axis":"UK","value":4998248.8787360657},{"axis":"Rest of Europe","value":4377453.0336044207},{"axis":"North America","value":774407.2512428624},{"axis":"South America","value":406617.4030374507},{"axis":"Asia","value":2019289.2299878027},{"axis":"Australia","value":2636515.3321608114},{"axis":"Africa","value":95916.0436818896}]];
+			
+			var color = d3.scaleOrdinal()
+				.range(["#B96167","#9C759D","#5090AA","#3B9F81","#859F4B","#CD8F47"]);
+				
+			var radarChartOptions = {
+			  w: width,
+			  h: height,
+			  margin: margin,
+			  maxValue: 9000000,
+			  levels: 6,
+			  roundStrokes: true,
+			  color: co
+			//Call function to draw the Radar chart
+			RadarChart(".radarChart7", data7, radarChartOptions);
+		</script>
+		
+		<div class="radarChart8"><h1>Fodder - 2030</h1></div>
+		<script>
+			var data8 = [[{"axis":"UK","value":80024.980168854},{"axis":"Rest of Europe","value":116116.3565902568},{"axis":"North America","value":25962.5188549098},{"axis":"South America","value":28676.9276261336},{"axis":"Asia","value":49347.67575754},{"axis":"Australia","value":359792.5345312589},{"axis":"Africa","value":14787.4492030386}],[{"axis":"UK","value":90262.6948289916},{"axis":"Rest of Europe","value":139291.193501324},{"axis":"North America","value":27550.1966943325},{"axis":"South America","value":30768.3606092815},{"axis":"Asia","value":50401.1975474235},{"axis":"Australia","value":379970.9360652507},{"axis":"Africa","value":16301.8660601332}],[{"axis":"UK","value":97504.9207208052},{"axis":"Rest of Europe","value":102480.9673832819},{"axis":"North America","value":22516.4016741468},{"axis":"South America","value":26147.2014585331},{"axis":"Asia","value":42130.1277985907},{"axis":"Australia","value":261853.0828185144},{"axis":"Africa","value":14490.4017678718}],[{"axis":"UK","value":94367.8920110905},{"axis":"Rest of Europe","value":128773.8213632326},{"axis":"North America","value":29326.2939112854},{"axis":"South America","value":32644.3439303695},{"axis":"Asia","value":57121.3766556785},{"axis":"Australia","value":398689.3791681781},{"axis":"Africa","value":16300.555116885}],[{"axis":"UK","value":71348.9139426439},{"axis":"Rest of Europe","value":119895.8399506806},{"axis":"North America","value":21798.1270888169},{"axis":"South America","value":24734.5119271481},{"axis":"Asia","value":39595.7008671133},{"axis":"Australia","value":305467.5012836248},{"axis":"Africa","value":12967.5848202878}],[{"axis":"UK","value":84076.217974771},{"axis":"Rest of Europe","value":122272.6307000914},{"axis":"North America","value":22332.3965601273},{"axis":"South America","value":24885.74203144},{"axis":"Asia","value":38823.8486384494},{"axis":"Australia","value":295574.3298571319},{"axis":"Africa","value":13963.6759175423}]];
+			    
+			var color = d3.scaleOrdinal()
+				.range(["#B96167","#9C759D","#5090AA","#3B9F81","#859F4B","#CD8F47"]);
+				
+			var radarChartOptions = {
+			  w: width,
+			  h: height,
+			  margin: margin,
+			  maxValue: 400000,
+			  levels: 6,
+			  roundStrokes: true,
+			  color: co
+			//Call function to draw the Radar chart
+			RadarChart(".radarChart8", data8, radarChartOptions);
+		</script>
+		
+		<div class="radarChart9"><h1>Minerals - 2030</h1></div>
+		<script>
+			var data9 = [[{"axis":"Rest of Europe","value":3628058.1886020275},{"axis":"North America","value":4254521.3691103868},{"axis":"South America","value":1531852.5843008624},{"axis":"Asia","value":5346082.4161555171},{"axis":"Australia","value":8699305.4732090347},{"axis":"Africa","value":390837.152654251}],[{"axis":"Rest of Europe","value":3971695.3108365629},{"axis":"North America","value":4603775.1553967493},{"axis":"South America","value":1686502.4735500112},{"axis":"Asia","value":5728715.4395210929},{"axis":"Australia","value":10712945.7439072076},{"axis":"Africa","value":450166.2504223494}],[{"axis":"Rest of Europe","value":4728588.9170277473},{"axis":"North America","value":8051797.088490109},{"axis":"South America","value":2560720.6865381314},{"axis":"Asia","value":13092868.4562564194},{"axis":"Australia","value":8219262.403630048},{"axis":"Africa","value":509172.817132626}],[{"axis":"Rest of Europe","value":4583279.1763455216},{"axis":"North America","value":6314888.5897038728},{"axis":"South America","value":2136335.301676102},{"axis":"Asia","value":9238707.62375056},{"axis":"Australia","value":9590326.2188883014},{"axis":"Africa","value":461897.2618235365}],[{"axis":"Rest of Europe","value":3309062.6457903283},{"axis":"North America","value":3911578.0189063502},{"axis":"South America","value":1433633.181500779},{"axis":"Asia","value":5010477.2468440402},{"axis":"Australia","value":9484892.7256712206},{"axis":"Africa","value":381782.9881478382}],[{"axis":"Rest of Europe","value":3422284.7554667601},{"axis":"North America","value":4182406.7312555248},{"axis":"South America","value":1508386.4414577344},{"axis":"Asia","value":5453269.016401941},{"axis":"Australia","value":9533419.7990849428},{"axis":"Africa","value":390738.7348923312}]];
+			
+			var color = d3.scaleOrdinal()
+				.range(["#B96167","#9C759D","#5090AA","#3B9F81","#859F4B","#CD8F47"]);
+				
+			var radarChartOptions = {
+			  w: width,
+			  h: height,
+			  margin: margin,
+			  maxValue: 12000000,
+			  levels: 6,
+			  roundStrokes: true,
+			  color: co
+			//Call function to draw the Radar chart
+			RadarChart(".radarChart9", data9, radarChartOptions);
 		</script>
 	</body>
 </html>
