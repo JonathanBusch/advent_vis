@@ -55,7 +55,7 @@
 			////////////////////////////////////////////////////////////// 
 			////////////////////////// Data ////////////////////////////// 
 			////////////////////////////////////////////////////////////// 
-			d3.csv("json/CO2Affordable.json").then(function(data) {
+			d3.csv("json/CO22030.json").then(function(data) {
   				console.log(data);
 
 			var data1 = [
@@ -120,7 +120,7 @@
 			  color: color
 			};
 			//Call function to draw the Radar chart
-			RadarChart(".radarChart1", data1, radarChartOptions);
+			RadarChart(".radarChart1", data, radarChartOptions);
 			});
 			
 		</script>
