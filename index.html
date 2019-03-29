@@ -55,7 +55,9 @@
 			////////////////////////////////////////////////////////////// 
 			////////////////////////// Data ////////////////////////////// 
 			////////////////////////////////////////////////////////////// 
-
+			
+			data = d3.json("data.json", function(error, data) {
+				console.log(data)
 			var data1 = [
 					  [//Affordable
 						{axis:"Rest of Europe",value:4107},
@@ -118,54 +120,261 @@
 			  color: color
 			};
 			//Call function to draw the Radar chart
-			RadarChart(".radarChart1", data1, radarChartOptions);
+			RadarChart(".radarChart1", data, radarChartOptions);
+			});
 		</script>
 		
-		<div class="radarChart2"></div>
+		<div class="radarChart2"><h1>Biodiversity - 2030</h1></div>
 		<script>
 			var data2 = [
 					  [//Affordable
-						{axis:"Rest of Europe",value:455},
-						{axis:"North America",value:127},
-						{axis:"South America",value:111},
-						{axis:"Asia",value:318},
-						{axis:"Australia",value:175},
-						{axis:"Africa",value:581}
+						{axis:"UK",value:222},
+						{axis:"Rest of Europe",value:632},
+						{axis:"Australia",value:6112},
+						{axis:"North America",value:2092},
+						{axis:"South America",value:2279},
+						{axis:"Africa",value:681},
+						{axis:"Asia",value:4033}
 					  ],[//BECCS
-						{axis:"Rest of Europe",value:771},
-						{axis:"North America",value:223},
-						{axis:"South America",value:197},
-						{axis:"Asia",value:559},
-						{axis:"Australia",value:310},
-						{axis:"Africa",value:1056}
+						{axis:"UK",value:416},
+						{axis:"Rest of Europe",value:619},
+						{axis:"Australia",value:5716},
+						{axis:"North America",value:1952},
+						{axis:"South America",value:2170},
+						{axis:"Africa",value:544},
+						{axis:"Asia",value:3751}
 					  ],[//Insular
-						{axis:"Rest of Europe",value:288},
-						{axis:"North America",value:76},
-						{axis:"South America",value:62},
-						{axis:"Asia",value:241},
-						{axis:"Australia",value:91},
-						{axis:"Africa",value:325}
+						{axis:"Rest of Europe",value:3677},
+						{axis:"Australia",value:3321},
+						{axis:"North America",value:1135},
+						{axis:"South America",value:169},
+						{axis:"Africa",value:118},
+						{axis:"Asia",value:666}
 					  ],[//TechFail
-						{axis:"Rest of Europe",value:689},
-						{axis:"North America",value:178},
-						{axis:"South America",value:177},
-						{axis:"Asia",value:445},
-						{axis:"Australia",value:231},
-						{axis:"Africa",value:455}
+						{axis:"Rest of Europe",value:4555},
+						{axis:"Australia",value:4537},
+						{axis:"North America",value:1226},
+						{axis:"South America",value:179},
+						{axis:"Africa",value:110},
+						{axis:"Asia",value:591}
 					  ],[//TechOptimism
-						{axis:"Rest of Europe",value:385},
-						{axis:"North America",value:123},
-						{axis:"South America",value:138},
-						{axis:"Asia",value:259},
-						{axis:"Australia",value:196},
-						{axis:"Africa",value:729}
+						{axis:"Rest of Europe",value:4173},
+						{axis:"Australia",value:4700},
+						{axis:"North America",value:1016},
+						{axis:"South America",value:131},
+						{axis:"Africa",value:93},
+						{axis:"Asia",value:398}
 					  ],[//UK
-						{axis:"Rest of Europe",value:680},
-						{axis:"North America",value:194},
-						{axis:"South America",value:221},
-						{axis:"Asia",value:395},
-						{axis:"Australia",value:301},
-						{axis:"Africa",value:1548}
+						{axis:"Rest of Europe",value:4216},
+						{axis:"Australia",value:4592},
+						{axis:"North America",value:1086},
+						{axis:"South America",value:136},
+						{axis:"Africa",value:104},
+						{axis:"Asia",value:423}
+					  ]
+					];
+			//Call function to draw the Radar chart
+			RadarChart(".radarChart2", data2, radarChartOptions);
+		</script>
+		
+		<div class="radarChart2"><h1>Biodiversity - 2030</h1></div>
+		<script>
+			var data2 = [
+					  [//Affordable
+						{axis:"Rest of Europe",value:4107},
+						{axis:"Australia",value:4161},
+						{axis:"North America",value:1080},
+						{axis:"South America",value:150},
+						{axis:"Africa",value:102},
+						{axis:"Asia",value:428}
+					  ],[//BECCS
+						{axis:"Rest of Europe",value:4878},
+						{axis:"Australia",value:5235},
+						{axis:"North America",value:1236},
+						{axis:"South America",value:162},
+						{axis:"Africa",value:117},
+						{axis:"Asia",value:474}
+					  ],[//Insular
+						{axis:"Rest of Europe",value:3677},
+						{axis:"Australia",value:3321},
+						{axis:"North America",value:1135},
+						{axis:"South America",value:169},
+						{axis:"Africa",value:118},
+						{axis:"Asia",value:666}
+					  ],[//TechFail
+						{axis:"Rest of Europe",value:4555},
+						{axis:"Australia",value:4537},
+						{axis:"North America",value:1226},
+						{axis:"South America",value:179},
+						{axis:"Africa",value:110},
+						{axis:"Asia",value:591}
+					  ],[//TechOptimism
+						{axis:"Rest of Europe",value:4173},
+						{axis:"Australia",value:4700},
+						{axis:"North America",value:1016},
+						{axis:"South America",value:131},
+						{axis:"Africa",value:93},
+						{axis:"Asia",value:398}
+					  ],[//UK
+						{axis:"Rest of Europe",value:4216},
+						{axis:"Australia",value:4592},
+						{axis:"North America",value:1086},
+						{axis:"South America",value:136},
+						{axis:"Africa",value:104},
+						{axis:"Asia",value:423}
+					  ]
+					];
+			//Call function to draw the Radar chart
+			RadarChart(".radarChart2", data2, radarChartOptions);
+		</script>
+		
+		<div class="radarChart2"><h1>Biodiversity - 2030</h1></div>
+		<script>
+			var data2 = [
+					  [//Affordable
+						{axis:"Rest of Europe",value:4107},
+						{axis:"Australia",value:4161},
+						{axis:"North America",value:1080},
+						{axis:"South America",value:150},
+						{axis:"Africa",value:102},
+						{axis:"Asia",value:428}
+					  ],[//BECCS
+						{axis:"Rest of Europe",value:4878},
+						{axis:"Australia",value:5235},
+						{axis:"North America",value:1236},
+						{axis:"South America",value:162},
+						{axis:"Africa",value:117},
+						{axis:"Asia",value:474}
+					  ],[//Insular
+						{axis:"Rest of Europe",value:3677},
+						{axis:"Australia",value:3321},
+						{axis:"North America",value:1135},
+						{axis:"South America",value:169},
+						{axis:"Africa",value:118},
+						{axis:"Asia",value:666}
+					  ],[//TechFail
+						{axis:"Rest of Europe",value:4555},
+						{axis:"Australia",value:4537},
+						{axis:"North America",value:1226},
+						{axis:"South America",value:179},
+						{axis:"Africa",value:110},
+						{axis:"Asia",value:591}
+					  ],[//TechOptimism
+						{axis:"Rest of Europe",value:4173},
+						{axis:"Australia",value:4700},
+						{axis:"North America",value:1016},
+						{axis:"South America",value:131},
+						{axis:"Africa",value:93},
+						{axis:"Asia",value:398}
+					  ],[//UK
+						{axis:"Rest of Europe",value:4216},
+						{axis:"Australia",value:4592},
+						{axis:"North America",value:1086},
+						{axis:"South America",value:136},
+						{axis:"Africa",value:104},
+						{axis:"Asia",value:423}
+					  ]
+					];
+			//Call function to draw the Radar chart
+			RadarChart(".radarChart2", data2, radarChartOptions);
+		</script>
+		
+		<div class="radarChart2"><h1>Biodiversity - 2030</h1></div>
+		<script>
+			var data2 = [
+					  [//Affordable
+						{axis:"Rest of Europe",value:4107},
+						{axis:"Australia",value:4161},
+						{axis:"North America",value:1080},
+						{axis:"South America",value:150},
+						{axis:"Africa",value:102},
+						{axis:"Asia",value:428}
+					  ],[//BECCS
+						{axis:"Rest of Europe",value:4878},
+						{axis:"Australia",value:5235},
+						{axis:"North America",value:1236},
+						{axis:"South America",value:162},
+						{axis:"Africa",value:117},
+						{axis:"Asia",value:474}
+					  ],[//Insular
+						{axis:"Rest of Europe",value:3677},
+						{axis:"Australia",value:3321},
+						{axis:"North America",value:1135},
+						{axis:"South America",value:169},
+						{axis:"Africa",value:118},
+						{axis:"Asia",value:666}
+					  ],[//TechFail
+						{axis:"Rest of Europe",value:4555},
+						{axis:"Australia",value:4537},
+						{axis:"North America",value:1226},
+						{axis:"South America",value:179},
+						{axis:"Africa",value:110},
+						{axis:"Asia",value:591}
+					  ],[//TechOptimism
+						{axis:"Rest of Europe",value:4173},
+						{axis:"Australia",value:4700},
+						{axis:"North America",value:1016},
+						{axis:"South America",value:131},
+						{axis:"Africa",value:93},
+						{axis:"Asia",value:398}
+					  ],[//UK
+						{axis:"Rest of Europe",value:4216},
+						{axis:"Australia",value:4592},
+						{axis:"North America",value:1086},
+						{axis:"South America",value:136},
+						{axis:"Africa",value:104},
+						{axis:"Asia",value:423}
+					  ]
+					];
+			//Call function to draw the Radar chart
+			RadarChart(".radarChart2", data2, radarChartOptions);
+		</script>
+		
+		<div class="radarChart2"><h1>Biodiversity - 2030</h1></div>
+		<script>
+			var data2 = [
+					  [//Affordable
+						{axis:"Rest of Europe",value:4107},
+						{axis:"Australia",value:4161},
+						{axis:"North America",value:1080},
+						{axis:"South America",value:150},
+						{axis:"Africa",value:102},
+						{axis:"Asia",value:428}
+					  ],[//BECCS
+						{axis:"Rest of Europe",value:4878},
+						{axis:"Australia",value:5235},
+						{axis:"North America",value:1236},
+						{axis:"South America",value:162},
+						{axis:"Africa",value:117},
+						{axis:"Asia",value:474}
+					  ],[//Insular
+						{axis:"Rest of Europe",value:3677},
+						{axis:"Australia",value:3321},
+						{axis:"North America",value:1135},
+						{axis:"South America",value:169},
+						{axis:"Africa",value:118},
+						{axis:"Asia",value:666}
+					  ],[//TechFail
+						{axis:"Rest of Europe",value:4555},
+						{axis:"Australia",value:4537},
+						{axis:"North America",value:1226},
+						{axis:"South America",value:179},
+						{axis:"Africa",value:110},
+						{axis:"Asia",value:591}
+					  ],[//TechOptimism
+						{axis:"Rest of Europe",value:4173},
+						{axis:"Australia",value:4700},
+						{axis:"North America",value:1016},
+						{axis:"South America",value:131},
+						{axis:"Africa",value:93},
+						{axis:"Asia",value:398}
+					  ],[//UK
+						{axis:"Rest of Europe",value:4216},
+						{axis:"Australia",value:4592},
+						{axis:"North America",value:1086},
+						{axis:"South America",value:136},
+						{axis:"Africa",value:104},
+						{axis:"Asia",value:423}
 					  ]
 					];
 			//Call function to draw the Radar chart
